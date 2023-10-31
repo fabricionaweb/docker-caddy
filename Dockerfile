@@ -30,7 +30,7 @@ EXPOSE 80 443
 RUN apk add --no-cache tzdata s6-overlay
 
 # copy files
-COPY --from=build-app /build/caddy /app
+COPY --from=build-app /build /app
 COPY ./rootfs/. /
 
 # run using s6-overlay
