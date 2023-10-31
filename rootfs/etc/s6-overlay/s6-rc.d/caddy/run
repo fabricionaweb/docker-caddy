@@ -1,9 +1,7 @@
 #!/usr/bin/with-contenv sh
 
-CONFIG_FILE=/config/Caddyfile
-
 # change chdir
 cd /config
 
 # run with limited permissions
-exec s6-setuidgid $PUID:$PGID /app/caddy run --config=$CONFIG_FILE
+exec s6-setuidgid $PUID:$PGID /app/caddy run --watch
