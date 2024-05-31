@@ -17,6 +17,7 @@ RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@v$XVERSION
 ARG VERSION
 RUN xcaddy build v$VERSION \
     --with github.com/caddy-dns/desec \
+    --with github.com/mholt/caddy-ratelimit \
     --output /build/caddy
 
 # runtime stage ================================================================
