@@ -18,6 +18,7 @@ ARG VERSION
 RUN xcaddy build v$VERSION \
     --with github.com/caddy-dns/desec \
     --with github.com/mholt/caddy-ratelimit \
+    --with github.com/greenpau/caddy-security \
     --output /build/caddy
 
 # runtime stage ================================================================
