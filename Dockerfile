@@ -9,7 +9,7 @@ ENV CGO_ENABLED=0 GOBIN=/usr/local/bin
 
 # dependencies
 RUN apk add --no-cache git && \
-    apk add --no-cache go --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+    apk add --no-cache go --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
 ARG XVERSION=0.3.5
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@v$XVERSION
 
